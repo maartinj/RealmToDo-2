@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BBE8C3A327D6772300FE1516 /* Realm_Intro_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8C3A227D6772300FE1516 /* Realm_Intro_2App.swift */; };
-		BBE8C3A527D6772300FE1516 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8C3A427D6772300FE1516 /* ContentView.swift */; };
+		BBE8C3A527D6772300FE1516 /* CountriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8C3A427D6772300FE1516 /* CountriesListView.swift */; };
 		BBE8C3A727D6772400FE1516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE8C3A627D6772400FE1516 /* Assets.xcassets */; };
 		BBE8C3AA27D6772400FE1516 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBE8C3A927D6772400FE1516 /* Preview Assets.xcassets */; };
 		BBE8C3B127D677AC00FE1516 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBE8C3B027D677AC00FE1516 /* Launch Screen.storyboard */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		BBE8C39F27D6772300FE1516 /* Realm Intro-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm Intro-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBE8C3A227D6772300FE1516 /* Realm_Intro_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_Intro_2App.swift; sourceTree = "<group>"; };
-		BBE8C3A427D6772300FE1516 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBE8C3A427D6772300FE1516 /* CountriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListView.swift; sourceTree = "<group>"; };
 		BBE8C3A627D6772400FE1516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBE8C3A927D6772400FE1516 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BBE8C3B027D677AC00FE1516 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			children = (
 				E49D25C62A16FFC300F68287 /* Models */,
 				BBE8C3A227D6772300FE1516 /* Realm_Intro_2App.swift */,
-				BBE8C3A427D6772300FE1516 /* ContentView.swift */,
+				E4B566732A19BC6A00142B95 /* Views */,
 				BBE8C3A627D6772400FE1516 /* Assets.xcassets */,
 				BBE8C3B027D677AC00FE1516 /* Launch Screen.storyboard */,
 				BBE8C3A827D6772400FE1516 /* Preview Content */,
@@ -86,6 +86,14 @@
 				E49D25C92A17008D00F68287 /* City.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E4B566732A19BC6A00142B95 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBE8C3A427D6772300FE1516 /* CountriesListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE8C3A527D6772300FE1516 /* ContentView.swift in Sources */,
+				BBE8C3A527D6772300FE1516 /* CountriesListView.swift in Sources */,
 				E49D25C82A16FFE600F68287 /* Country.swift in Sources */,
 				E49D25CA2A17008D00F68287 /* City.swift in Sources */,
 				BBE8C3A327D6772300FE1516 /* Realm_Intro_2App.swift in Sources */,
