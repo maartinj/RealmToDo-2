@@ -11,7 +11,6 @@ import RealmSwift
 class City: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var id: ObjectId
     @Persisted var name: String
-    @Persisted var cities: List<City>
     
     convenience init(name: String) {
         self.init()
