@@ -16,6 +16,7 @@
 		E49D25C52A16FFB600F68287 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E49D25C42A16FFB600F68287 /* RealmSwift */; };
 		E49D25C82A16FFE600F68287 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D25C72A16FFE600F68287 /* Country.swift */; };
 		E49D25CA2A17008D00F68287 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49D25C92A17008D00F68287 /* City.swift */; };
+		E4B566752A19C0A400142B95 /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B566742A19C0A400142B95 /* CountryRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		BBE8C3B027D677AC00FE1516 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		E49D25C72A16FFE600F68287 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		E49D25C92A17008D00F68287 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		E4B566742A19C0A400142B95 /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE8C3A427D6772300FE1516 /* CountriesListView.swift */,
+				E4B566742A19C0A400142B95 /* CountryRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				BBE8C3A527D6772300FE1516 /* CountriesListView.swift in Sources */,
 				E49D25C82A16FFE600F68287 /* Country.swift in Sources */,
+				E4B566752A19C0A400142B95 /* CountryRowView.swift in Sources */,
 				E49D25CA2A17008D00F68287 /* City.swift in Sources */,
 				BBE8C3A327D6772300FE1516 /* Realm_Intro_2App.swift in Sources */,
 			);

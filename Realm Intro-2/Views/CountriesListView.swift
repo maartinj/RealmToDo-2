@@ -11,6 +11,7 @@ import RealmSwift
 
 struct CountriesListView: View {
     @ObservedResults(Country.self) var countries
+    @FocusState private var isFocused: Bool?
     var body: some View {
         NavigationView {
             VStack {
@@ -18,8 +19,8 @@ struct CountriesListView: View {
                     Text("Tap on the \(Image(systemName: "plus.circle.fill")) button above to create a new Country.")
                 } else {
                     List {
-                        ForEach(countries) { country in
-                            
+                        ForEach(countries.sorted(byKeyPath: "name")) { country in
+                            CountryRowView(country: country, isFocused: _isFocused)
                         }
                         .listRowSeparator(.hidden)
                     }
@@ -27,6 +28,7 @@ struct CountriesListView: View {
                 }
                 Spacer()
             }
+            .animation(.default, value: countries)
             .navigationTitle("Countries")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -35,6 +37,18 @@ struct CountriesListView: View {
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .font(.title2)
+                    }
+                }
+                ToolbarItemGroup(placement: .keyboard) {
+                    HStack {
+                        // Bug in Xcode: HStack with Spacer and Button not show the button, only when first is the Button, and then Spacer
+//                        Spacer()
+                        Button {
+                            isFocused = nil
+                        } label: {
+                            Image(systemName: "keyboard.chevron.compact.down")
+                        }
+                        Spacer()
                     }
                 }
             }
