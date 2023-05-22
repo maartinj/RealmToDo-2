@@ -20,7 +20,11 @@ struct CountriesListView: View {
                 } else {
                     List {
                         ForEach(countries.sorted(byKeyPath: "name")) { country in
-                            CountryRowView(country: country, isFocused: _isFocused)
+                            NavigationLink {
+                                CitiesListView(country: country)
+                            } label: {
+                                CountryRowView(country: country, isFocused: _isFocused)
+                            }
                         }
                         .listRowSeparator(.hidden)
                     }
