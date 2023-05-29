@@ -4,7 +4,8 @@
 //
 //  Created by Stewart Lynch on 2022-03-07.
 //
-// Link: https://www.youtube.com/watch?v=I6Yl9p_9WwE&ab_channel=StewartLynch
+// Link - One Many Relationship Part 1: https://www.youtube.com/watch?v=I6Yl9p_9WwE&ab_channel=StewartLynch
+// Link - One Many Relationship Part 2: https://www.youtube.com/watch?v=XrmOR_Qv9Aw&ab_channel=StewartLynch
 
 import SwiftUI
 import RealmSwift
@@ -12,6 +13,7 @@ import RealmSwift
 struct CountriesListView: View {
     @ObservedResults(Country.self) var countries
     @FocusState private var isFocused: Bool?
+    @State private var presentAlert = false
     var body: some View {
         NavigationView {
             VStack {
@@ -26,6 +28,7 @@ struct CountriesListView: View {
                                 CountryRowView(country: country, isFocused: _isFocused)
                             }
                         }
+                        .onDelete(perform: deleteCountry)
                         .listRowSeparator(.hidden)
                     }
                     .listStyle(.plain)
@@ -57,6 +60,17 @@ struct CountriesListView: View {
                 }
             }
         }
+        .alert("You must first delete all of the cities in this country.", isPresented: $presentAlert, actions: {})
+    }
+    func deleteCountry(indexSet: IndexSet) {
+        guard let index = indexSet.first else { return }
+        let selectedCountry = Array(countries.sorted(byKeyPath: "name"))[index]
+        guard selectedCountry.cities.isEmpty else {
+            // show alert
+            presentAlert.toggle()
+            return
+        }
+        $countries.remove(selectedCountry)
     }
 }
 

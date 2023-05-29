@@ -35,6 +35,7 @@ struct CitiesListView: View {
                     Text(city.name)
                 }
                 .onDelete(perform: $country.cities.remove)
+                .onMove(perform: $country.cities.move)
                 .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
@@ -43,6 +44,9 @@ struct CitiesListView: View {
         .navigationTitle("")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                EditButton()
+            }
             ToolbarItemGroup(placement: .keyboard) {
                 HStack {
                     // Bug in Xcode: HStack with Spacer and Button not show the button, only when first is the Button, and then Spacer
