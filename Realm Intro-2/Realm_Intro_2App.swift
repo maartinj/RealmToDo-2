@@ -14,11 +14,11 @@ struct Realm_Intro_2App: App {
             TabView {
                 CountriesListView()
                     .tabItem {
-                        Label("Countries", image: "list.dash")
+                        Label("Countries", systemImage: "list.dash")
                     }
                 AllCitiesListView()
                     .tabItem {
-                        Label("Cities", image: "list.dash")
+                        Label("Cities", systemImage: "list.dash")
                     }
             }
             .onAppear {
