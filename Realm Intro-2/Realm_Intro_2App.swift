@@ -11,11 +11,20 @@ import SwiftUI
 struct Realm_Intro_2App: App {
     var body: some Scene {
         WindowGroup {
-            CountriesListView()
-                .onAppear {
-                    print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
-                     UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
-                }
+            TabView {
+                CountriesListView()
+                    .tabItem {
+                        Label("Countries", image: "list.dash")
+                    }
+                AllCitiesListView()
+                    .tabItem {
+                        Label("Cities", image: "list.dash")
+                    }
+            }
+            .onAppear {
+                print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.path)
+                UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+            }
         }
     }
 }
